@@ -1,4 +1,6 @@
 import React from 'react';
+import User from './components/User'
+import FollowerList from './components/FollowerList';
 './App.css';
 
 class App extends React.Component {
@@ -9,21 +11,12 @@ class App extends React.Component {
         <input placeholder='Github Handle'/>
         <button>Search</button>
       </form>
-      <div id='UserCard'>
-        <img src="https://avatars.githubusercontent.com/u/87622513?v=4" />
-        <a target="_blank" rel='noreferrer' href="https://github.com/EstrellaDionis"><h3>Dionis Estrella</h3></a>
-        <p>Estrella Dionis</p>
-        <p>Total Repos: 35</p>
-        <p>Total Followers: 2</p>
-      </div>
 
-      <div id='followers'>
-          <div className='follower'>
-            <img src="https://avatars.githubusercontent.com/u/6520868?v=4" />
-            <a target="_blank" rel='noreferrer' href="https://github.com/MarkRivera"><p>MarkRivera</p></a>
-          </div>
+      <User />
+      <FollowerList />
+     
+
       </div>
-    </div>
     );
   }
 }
